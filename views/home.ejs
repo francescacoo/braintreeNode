@@ -1,0 +1,49 @@
+<div layout="row" layout-align="start center" class="braintree-message">
+	<div flex="55">
+		<p>Your credit card information will not interact with our servers.</p>
+	</div>
+	<div flex="45">
+		<a href="https://www.braintreegateway.com/merchants/5tzcs2f9mynrrmgp/verified" target="_blank">
+		<img src="https://s3.amazonaws.com/braintree-badges/braintree-badge-wide-dark.png" width="100%" border="0" />
+		</a>
+	</div>
+</div>
+
+<md-content layout="column">
+	<form name="form" action="/paid" method="post" style="max-width: 300px;">
+		<div>
+			<span>Payment</span>
+		</div>
+
+		<div layout="row">
+			<p>Pay 10 euro using Braintree.</p>
+		</div>
+
+		<div layout="row">
+			<p>Your credit card information will not interact with our servers.</p>
+		</div>
+
+		<div layout="row">
+			<div>
+				<a href="https://www.braintreegateway.com/merchants/5tzcs2f9mynrrmgp/verified" target="_blank">
+					<img src="https://s3.amazonaws.com/braintree-badges/braintree-badge-wide-dark.png" width="100%" border="0" />
+				</a>
+			</div>
+		</div>
+
+
+		<div id="dropin" style="padding-top:10px;">
+		</div>
+
+		<div layout="row" style="padding-top:10px;">
+			<button type="submit">PAY NOW</button>
+		</div>
+
+	</form>
+</md-content>
+
+<% if (data.token) { %>
+	<script>
+		var token = "<%= data.token %>";
+	</script>
+<% } %>
